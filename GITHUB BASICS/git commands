@@ -1,0 +1,166 @@
+GIT CREATE
+1; to Clone an existing repository
+ [ git clone ssh://user@domain.com/repo.git]
+
+2; to Create a new local repository
+ [ git init]
+
+LOCAL CHANGES
+3; to View Changed files in your working directory
+ [ git status]
+
+4; to View Changes to tracked files
+ [git diff]
+
+5; To Add all current changes to the next commit
+ [git add] .
+
+6; To Add some changes in <file> to the next commit
+ [git add -p <file>]
+
+7; to Commit all local changes in tracked files
+ [git commit -a]
+
+8; to Commit previously staged changes
+ [git commit]
+
+9; to Change the last commit 
+Don‘t amend published commits!
+ [git commit --amend] 
+
+10; to COMMIT HISTORY
+Show all commits, starting with newest
+ [git log]
+
+11; to Show changes over time for a specific file
+ [git log -p <file>]
+
+12; to see Who changed what and when in <file>
+ [git blame <file>]
+
+BRANCHES & TAGS
+13; to List all existing branches
+ [git branch -av]
+
+14; to Switch HEAD branch
+ [git checkout <branch>]
+
+15; to Create a new branch based
+on your current HEAD
+ [git branch <new-branch>]
+
+16; to Create a new tracking branch based on a remote branch
+ [git checkout --track <remote/branch>]
+
+17; to Delete a local branch
+ [git branch -d <branch>]
+
+18; to Mark the current commit with a tag
+ [git tag <tag-name>]
+ 
+UPDATE & PUBLISH
+19; to List all currently configured remotes
+ [git remote -v]
+
+20; to Show information about a remote
+ [git remote show <remote>]
+
+21; to Add new remote repository, named <remote>
+ [git remote add <shortname> <url>]
+
+22; to Download all changes from <remote>,
+but don‘t integrate into HEAD
+ [git fetch <remote>]
+
+23; to Download changes and directly merge/integrate into HEAD
+ [git pull <remote> <branch>]
+
+24; to Publish local changes on a remote
+ [git push <remote> <branch>]
+
+25; to Delete a branch on the remote
+ [git branch -dr <remote/branch>]
+
+26; to Publish your tag s
+ [git push --tags]
+
+MERGE & REBASE
+27; to Merge <branch> into your current HEAD
+ [git merge <branch>]
+
+28; to Rebase your current HEAD onto <branch>
+Don‘t rebase published commits!
+ [git rebase <branch>]
+
+29; to Abort a rebase
+ [git rebase --abort]
+
+30; to Continue a rebase after resolving conflicts
+ [git rebase --continue]
+
+31; to Use your configured merge tool to
+solve conflicts
+ [git mergetool]
+
+32; to Use your editor to manually solve conflicts and (after resolving) mark file as resolved
+ [git add <resolved-file>]
+ [git rm <resolved-file>]
+
+UNDO
+33; to Discard all local changes in your working  directory
+ [git reset --hard HEAD]
+
+34; to Discard local changes in a specific file
+ [git checkout HEAD <file>]
+
+35; to Revert a commit (by producing a new commit with contrary changes)
+ [git revert <commit>]
+
+36; to Reset your HEAD pointer to a previous commit and discard all changes since then
+ [git reset --hard <commit>]
+
+37; to preserve all changes as unstaged changes
+ [git reset <commit>]
+
+38; to preserve uncommitted local changes
+ [git reset --keep <commit>.]
+
+39; to see the commit logs
+ [git log]
+
+40; to see the specific last commits 
+ [git log -n 2] for last 2 commits.
+
+41; to see the complete lines changed on the commits 
+ [git log --stat]
+
+42; to see the changes in one line 
+ [git log --oneline]
+
+43; to see the commits of specific team member 
+ [git log --author="user name"]
+
+44; to see the difference b/w the file modification which are staged  
+ [git diff --staged]
+
+45; to unstage a staged file
+ [git reset HEAD <file name>]
+
+46; to bring the diff b/w specific commits
+ [git diff HEAD~1or 2 or 3] 1,2,3 are the commits that needed to be jumped from the last commit 
+ to specify the file that to be diff in the commit add the file name after the [HEAD~n].
+
+47; to compare with the specific commits 
+ go to the git log
+ then [git diff <that commit id which to commit id that we neede>
+
+48; to extract  the file to rework on it without deleteing extracting the commit id in which the file is good or from where i need to work
+ go to [git log --oneline]
+ select the git commit id on which we need to work and 
+ [git checkout HEAD~<commit id no as 1,2,3> file name if the commit has more than one files]
+
+49; to check whether the local repository is assigned to the remote repo
+ [git remote -v]
+
+50; 
+commonly used git hub commands.

@@ -1,0 +1,25 @@
+1 version control sysytem software which is used to track the changes to the source code on the organiser level in the centralized location.
+2 source code any information that is written in a txt file and that is readable and which is saved useing language .
+3 version control system helps us track and manage the changes on the same project where many peoples work on the same project on a organisation.
+4 two types of version control system the 2 gen is the  central VCS and distributed VCS DVCS is the 3 gen or the latest version of version control system.
+5 cenralized version control system contains only remote repo the developers cannot have a local repo the chnges are to be done on the remote repo so the developers who works ont the same project will get the same changes that one debveloper made to the remote repo.
+6 the version control systems work are 
+	1 storeing changes
+	2 compareing the versions 
+	3 restoring the changes
+	4 collabrating with others
+7 the central vcs is only used when the developers are to be connected to the remote repo.
+8 diatrebuted vcs are same as the central vcs this will allow the developer can download the source code to the machine on the new repository called as the local repo we can download the source code and the version history of the source histroy.
+9 the changes will be on the local repo that we can changethe source code and therewe is no need to be connected to the central repo the changes are to be pushed to the central repo by the developer while he finished the changes in the source code.
+10 fetching and pushing commands are to be done mannualy by the developer.
+11 except push and pull everthing can be done without internet in dvcs .
+12 diff's b/w el family,debian & rhel,ubantu
+13 git life cycle 
+	1 working directory or local repo is .git
+	2 stageing area were the codes are on the localrepo
+	3 local repo
+LDAP ,RBAC ,LOGGING ,AUDITING ,
+14 work flow in branches two types,
+	1 feature workflow.
+	2 git workflow.
+git hub merging.

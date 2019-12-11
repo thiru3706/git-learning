@@ -1,0 +1,4 @@
+1 git is a DVCS distributed version control system.
+2 git trackes the changes and keep the files versioned 
+3 we can have a local and a remote repository on git 
+4 the basic commands that we use in git are to create repositories, makeing changes, syncing repositories, parllel developement.

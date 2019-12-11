@@ -1,0 +1,57 @@
+assessment 
+1,what is multi branch repo?
+	multi branch repositorys these repository are clone or the working repository other than the master branch which contains the original source code these branches are used to avoid over writing on the source code that is available on the master branch multiple branches are used to help multiple developers to work on a same project these multiple branches are then merged to master after testing the code changes that are made on the multipe branches
+ these branches can be cteated by the terminal command 
+	[git branch <branch name>]
+ to change the working branches we use 
+	[git checkout <branch name>]
+ to know the working branch 
+	[git branch]
+ to merge these branch that can be done on both the terminal and the ui of the git 
+ on the terminal we need to pull the changes that we made on the branch repo from the master  beranch repo ana then we use the command to merge 
+	[git pull origin <branch name>] / go to the master branch and [git merge <branch name>]
+ in the ui we can merge the by useing the pull request option.
+ 	multiple branches for example:
+		default branch is the master branch 
+		feature1 featuer2 featuer3 
+	those three are the feature update on which three different developers work on the source code for feature update.
+
+2,how do you manage or combine the multiple commits into one ?
+	to manage the commits
+		we can revert the commit to go back to the previous commit 
+		we can check the commits by the commit log command i.e [git log]
+		to see the changes  betweent the commits we use the git diff option i.e [git diff <from commit id> <to commit id>
+		to combine multiple commits to one we use squash option for that we need multiple commands i.e 
+			[git rebase -i HEAD~<the no of last commits that we need to merge>]
+		this option will open an editor that contains the commit id's and its all start with the word pick we need to change the commits which are needed to be merged to squash and then save and quit the editor and push the latest edited commit to the remote repo.
+			for example:
+					pick <commit id> commit no
+					pick <commit id> commit no 
+					pick <commit id> commit no
+	 		to change it like this
+					pick <commit id> commit no
+					squash <commit id> commit no
+					squash <commit id> commit no
+			then save the editor and push the commits to the repository if the previous commits are pusherd to the remote repository then the git will give us error so we can  not use the normal push command i.e [git push origin <branch name>], so we need to use -f force flag to push to the remote repo.
+   	
+3,what are possible ways to create a branch?
+	the possible ways to create branch's are 
+		one way is through the terminal
+		the other ways is through the git ui
+	from the terminal we use the command [git branch <branch name>],this is the simole way of createing branch on the terminal we need to push the changes to the remotee repo by [git push orgin <branch name>
+	from the git ui we can see the branches option on the job area above the job name and below the repo name there it will show as the default branch on that we can create new branch to refelct the changes to the local repo we need to fetch the changes by the command [git pull origin <branch name>].
+ the above shown are the ways of createing the branches on the git.
+  
+4,what is staging ? what are the possible action can be done in staging ?
+	stageing is the operation that the changes on the local repo are added to the git local repo this process is the one step before the commiting process in commiting process we define the changes to the files that are in the stageing area,
+		we can do the following actions of modifing,deleteing,inserting of files these are those action that are ddone to stageing of the file this stageing is done by the simple command [git add <file name that are needed to be staged>]
+		these staged files can be unstaged by the option git reset command [git reset <file that needed to be unstaged>]
+ 
+5,why do we use git ? what are the major features ?
+	we use git as the version control system it is the third generation if the version control system that is distributed version control system 
+	the major features of the git are
+		we can use git as the remote repository or directory of files saveing we can axcess it any where
+		we can use git as version control system on which we can add features to the source code by cloneing and branching the original source code and work on it and merge the changes that are made on the branch and save the time of verifieng the whole source code.
+		we can add the commits of the changes that we on the code to change the particular changes done we can use the commits to change it this reduces the time comsumption 
+		we can track the changes with the help of commits on the changes. 
+		the most important thing is multiple developers can work on the same project source code and add their featers to the source code. 
