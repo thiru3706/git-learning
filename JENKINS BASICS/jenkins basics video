@@ -1,0 +1,22 @@
+nov 25 
+
+jenkins introduction
+
+1 CI continous integration
+
+2 when a software is developed it contains many bugs these bugs are then integrated by several developers by testing that update for bugs for example three or more developers work on a same project or software they all get the ver 1 software and they test for different bugs and rewrite the code for those bugs,these are then updated to the source code these source code will be as version 1.1 ,1.2 thse codes are to be integrated and to be tested and this makes the process heavy and time consumeing to reduce the time consumption we use jenkins or continous integration CI these ci are used to integrate the cource code after the updates are relesed these small updated codes will be tested automatically and the response to the test will be sint to developer in hours as feedback we use jenkins as the continous integration medium,these continous integration process roles a major part in the software developement area these helps the devlopers to make the updates as to reduce the bugs and these CI helps to reduce the time consumption of the project.
+
+3 jenkins are one of the continous integration tool this is based on the java many companys use jenkins as the CI tool nowadays.
+
+4 installing jenkins in the machine.
+
+5 installed jenkins already.
+
+6 jenkins master slave architecture in jenkins we use basic master slave architecture to control the various servers on the operation for example the testing server and the production server the testing will be done on the testing server and the production will be done on the production server for these controls we use this  master slave architecture.
+
+7 CD continous deployment continous integration is done continous deployment is the process of testing and production master slave works.
+
+8 by useing GIT HOOKS triggering jobs on jenkins master slave configration system.
+
+9 we use docker and git hub to assign jobs on the jenkins.jenkins are runned on the 8080 port or on any port that we choose for the slave servers which is for example test and production servers. git hub are like storage in which we can upload texts or codes in docker we only can upload image files these image files can be downloaded and worked at any time.
+
