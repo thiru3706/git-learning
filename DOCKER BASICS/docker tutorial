@@ -1,0 +1,128 @@
+DOCKER VIDEO TUTORIAL.
+
+1,docker is a wrap of operating system on which we can work like a virtual machine but in a low storage space .
+2,these docker's are in low storage space because in virtual machine we need to download the full os as the guest os and in docker we only download the binarys and linraries that we need to get workimg.
+3,to install docker in ubuntu we use simple commands as
+		[sudo apt-get install docker.io].
+4,to get the version of docker asusal [docker --version ].
+5,the lifecycle of docker is 
+	1.docker hub where the docker images on operating system are availabe
+	2.docker engine the system software that we install to use docker
+	3.then the docker images
+	4.then the conatiner stages
+		1.run
+		2.stop
+		3.delete
+6,docker hub is like the remote repository in the git hub this repositary contains the guest os and the needed softwares .
+7,to download the needed image os we use the command 
+		[sudo docker pull <image name>] in case we need ubuntu os we use image name as ubuntu.
+8,to check the downloaded image details we use the command
+		[sudo docker images].
+9,to run the image container we use  command
+		[sudo docker run -it -d <image name>]
+	-it flags represents to make the conatiner interactive
+	-d demon flag to run the container on the backround even if i ama not working on it.
+10,to check the running images use command
+		[sudo docker ps]
+11,to stop the docker container use command 
+		[sudo docker stop <docker container id>].
+12,to check all the containers that are running and closed use the command 
+		[sudo docker ps -a]
+13,to work on the running container we use command 
+		[sudo docker exec -it <container id> bash]container id can be obtained by [sudo docker ps] option.
+		bash is used to run the docker container on the terminal that we working right now.
+14,to get out the container just use the [exit] command.
+15,to stop an irresponsive container we use the command kill
+		[sudo docker kill <container id>]
+16,to delete an stoped or killed container that we no needed any more use the command 
+		[sudo docker rm <conatiner id>]
+17,to remove the image that we downloaded in the system use the command
+		[sudo docker rmi <image id >]image id can be get from the command [sudo docker images].
+18,the above shown are the basic commands to manage the conatainers and the images on docker.
+
+19,to save the changes to the docker container that we made in the container use command
+		[sudo docker commit <container id> <new image name>].
+20,to delete all the container in a single command use command
+		[sudo docker rm -f $(sudo docker ps -a -q)] it will remove all the containers in the system.
+21,to install the software to a docker container and saved it for example apache2 no sudo command will work on the container because the containers use the minimum binary to run the os .
+22,after installing the apache to the docker container image save the immage by the commit option and to change the port of the apache running in the docker image to the base machine we use the flag [-p] on the command this changeing of port is called as the port mappig.
+		[sudo docker run -it -p 82:80 -d <image name>].
+23,to login to the docker hub use the terminal command
+		[sudo docker login]
+		then the user name and password.
+24,then to pull the saved docker image to the docker hub use the command.
+		[sudo docker push <image name>]
+25,to rename the existing file use the command
+		[sudo docker tag <existing docker id> <new name>].
+26,to push the files to the docker hub we need to rename the name with the version tag as shown below.
+		[sudo docker tag <docker id> <username/new image name:version>].
+27,then try the push option and if this tag was not done then it will not get pushed.
+28,DOCKER FILE
+29,this docker file are the script version to create work on the docker.
+
+30,shortcut to stop useing sudo for docker 
+		[sudo usermod -aG docker $USER]then reload the terminal and it will work we can use the docker command without sudo.
+31,docker files are the shortcut to create docker containers where we give all commands in a txt file and execute it then the docker container will be running with what we need on it ,there are basic commands tht we use in the docker file.
+32,FROM-this from command used as the first command of the docker file this defines the os that we need to run in the container.
+33,RUN-this command is used to run the basic linux command that we used to run in the terminal like apt-get update ,install etc..
+34,ADD-this command is used to add the files to container that we need to be run in the container 
+35,CMD-this command used to run a command on the container.
+36,ENTRYPOINT-this command is used to start services in the container .
+37,ENV-this commands are used to set the environmental variables.
+38,docker file example:
+		FROM ubuntu
+		RUN apt-get update
+		RUN apt-get install apache2
+		ADD . /var/www/html <created a html file in the current directory to move it to the container on the location .
+		ENTRYPOINT apachectl -D FOREGROUND to run the apache container when its online.
+		ENV name <needed image name>
+	the above shown is the simple docker file.
+39,to buid a new docker file use command 
+		[sudo docker build . -t <docker file name>].
+40,DOCKER VOLUME
+41,docker volumes are used to presist data across the lifeitme of a container .
+42,to map the volume to another container use command
+		[sudo docker run -it -v </home/thiru/dockerfile>:</app> -d <ubuntu>]. this is bind mount option .
+43,there is two tyoes of volume manage they are bind mount & docker volume .
+44,this bindmount option is difficult to mount the container to another os for example the container that we run is ubuntu and the container that we need to move is to the windows then the file path that we give wil not match to the windows os,
+45,to over come this disadvantage docker volumes are implemented.
+46,docker volume are managed by the docker engine this volumes are can be mounted to any docker engine so ther will be no os mismatch disadvantage.
+47,to create a docker voume use command
+		[sudo docker volume create <volume name>].
+48,to see the available volumes use command 
+		[sudo docker volume ls]
+49,to mount or attaching a volume to a container use command 
+		[sudo docker run -it --mount source=<volume name>,target=<path to directory> -d <image name>]'
+50,to copy files from one container to another use command 
+		[sudo docker cp <from file location ><file name > <to container id>:<location to be copied>]
+		for example sudo docker cd ./2.html containerid:/var/www/html.
+51,once we mount the container to a volume then the container will run the volume if the files are not available in the container.
+52,monolithc application is a patch that contains many services in it on a single platform.
+53,monolithic applications are single source code to make changes in any seperate service in that monolithic application the developer need to download the full application source code and study it if the codes for service are merged then adding any additional updates will lead to 
+54,To resolve this problem we use microservices.
+55,microservices is a software developement architecture style that helps to build an application as a collection of loosely coupled services.
+56,these services are deployed in a seperate docker containers this containers can be edited according to the developers requirement on service this will not affect other services working.
+57,docker compose option is used to combine docker containers to one appilication as the microservices.
+58,this docker compose file is return by the YAML file this can create multiple docker images and configure them and can be run in a single command.
+59,when the container is removed the site on the container will be also removed in that case if we need the container back at that situation docker's container orchestration will help.
+60,the tool that used for container orchestration is docker swarm.
+61,docker swarm works as like the leader & worker type .
+62,to do the docker sworm following steps are
+		[sudo docker sworm init] in the master or leader that we work.
+		[there will a command in the terminal pass it to the worker node in which docker is installed]
+	then the node will be connected.
+63,to stop the cluster or sworm operation use command
+		[sudo docker swarm leave]
+64,for master to leave the swarm operation use the command
+		[sudo docker swarm leave --force]
+65,docker services to create docker servics use command
+		[sudo docker service create -name <name of the service> --replicas <no of replicas> <image name>].
+66,in the docker swarm we use this docker services to run appilications , while useing docker swarm the leader and worker that merged will get the same containers running on them according to the replicas that we create.
+67,to list the services use command 
+		[sudo docker service ls]
+68,when this swarm id running  if the replicated containers in the leader or worker is deleted the docker will automatically creates the replicas in both the leader and the worker.
+69,to scale the replicas use the command
+		[sudo docker service scale <name of the service>=<no of replicas>].
+70,to remove the services from leader use the command
+		[sudo docker service rm <service name>].
+
