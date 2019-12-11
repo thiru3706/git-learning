@@ -1,0 +1,74 @@
+1.to create a directory or folder [mkdir <directory name>].
+
+2.to remove a directory [rmdir <directory name>].
+
+3.to view directory [cd <directory name>].
+
+4.to go folder up [cd ..].
+
+5.to go to home [cd].
+
+6.to remove directory with files [rm -rf <directory name>].
+
+7.to create a file we use editors such us [vi,vim,nano], vi and vim are frequently used and nano is more user friendly.
+
+7.1 in those editors their are editing options.
+
+8.to remove a file [rm <file name>].
+
+9.to view contents of the file ,go to its directory and [cat <file name>],to view it from any directory use [cat <path of the file directory/file name]:exp-path/filename.
+
+10.to view contents or list of files in the directory [ls],to view all files includeing hidden files [ls -a], to view the details of the list in the directory go to the directory and [ll].
+
+11.to move files from one directory to another {go to file location and use[mv <file name> <path of the destination location>].-exp:filename/path.
+
+12.to move file from one directory to another from home directory use [mv <from path>/<file name>/<to path>].
+
+13.to copy a file from one directory to another {go to the files location and use [cp <file name> <destination path>].exp:filename/path.
+
+14.to view list of users from rootuser or with sudo user [users].root user-the machines total base user/sudo user-the admins search of users.
+
+15.to view list of available groups from rootsues or with sudo user
+[groups].
+
+16.to create a user from the rootusr or wuth sudo user [adduser <username>].
+
+17.to create a group from the rootuser or with sudo user [addgroup <group name>].  
+
+18.to check all available groups and respective users [cat /etc/group]. 
+
+19.to check the working dorectory [pwd].
+
+20.meaning of sudo is to do a cmd with admin permissions.
+
+21.to assign a group to a user from root user or use sudo[usermod -a -G <group name > <user name>].
+
+22.to change a primary group of a root user or with sudo user [usermod -g <groupname> <username>].
+
+23.to delete a group from a root user or with sudo [groupdel <groupname>].
+
+24.to delete a user from rootuser or with sudo [userdel <username>]. only the primary group assigned with the user will be deleted the sub groups will not be deleted.
+
+25.to delete all files regarding a user from rootuser or with sudo [userdel -r <username>].
+
+26.to know the options to a command [<command> <-h>].
+
+27.to change permissions of a file :read-4,execute-1,write-2, rwx,
+their will be three permissions as:rwx-rwx-rwx these first one is for admin and decond is for group and third one is for other users.
+tochange use [chmod <rwx> <filename>].
+the permissions eill be in rwx on cmnd can be given as needed by adding 1,2,4.
+
+28.to change the owner details with rootuser or with sudo [chown <new username>:<new group name> <path destination>.
+
+29.to search or find a file or directory on a directory [find <file or directory name>].
+
+30.to search a file from home directory [cd] to home directory and use
+[find ./ -name <file or directory name>].
+
+31.to search the content on the files [grep <content to search> <file name].
+
+32.to ignore the contents that are not neededon a file [grep -v <content to ignore> <file name>].
+
+33.piping option is used to run multiple commands in a single stroke [|] ,exp:[cat <file name> | grep <content to search> | sort].
+
+34.[>>] this is redirect option used to save yhe output to the txt file.
