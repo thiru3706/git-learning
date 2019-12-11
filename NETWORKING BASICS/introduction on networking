@@ -1,0 +1,26 @@
+1 introduction for networking by google.
+2 two types of networking models available.
+	1.TCD/IP
+	2.OSI 
+3 we see about TCD/IP.
+	the tcd/ip model consist of five layers
+
+		sl.no  	layer   -   protocol    -    protocol data unit    -    addressing
+		1	physical   10baseT,802.11	bits			n/a
+		2	datalink   ethernet,wifi	frames			MAC Address
+		3	network	   IP			datagram		IP address
+		4	transport  TCP/UDP		segment			port #'s
+		5	appl~ion   HTTP,SMTP,etc..	messeges 		n/a
+
+4 these layers are used for transfering data through one or more computers on a network.
+5 physical layer is through the cable  these cables are under two catagories normal and duplex cables or twisted cables.
+6 hub are used to connect two computers lan cable {local area network} these hub are used to send data through it on a various connection of a lan network but only one computer can transfer data at a time.
+7 switches are used to reduce the limitations of the hub, this switchs are used to connect a set of computers in a lan and can be link.
+transmitting data at a same time.
+8 routers are used to data transmission through one part of world to another computer through internet.
+9 these datas are transfered through this TCP/UDP
+10 TCP transport protocols this reduces the collision of data in a network when n no of data was transfered through the same network.
+11 udp is the basic of tcp these have limitations over tcp.
+12 routers operates in layer 3 network layer.
+13 duplex means communication on both sides.i.e the sender and reciver can both send and recive data.
+14 networking is a bits that represents in 8 numbers [octet].

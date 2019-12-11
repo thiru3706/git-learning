@@ -1,0 +1,36 @@
+1 DNS Domain Name Sysytem used to convert a IP Internet Protocol to site names for axcessing it.
+2 there or sevel types of Dns available  these are used to change the ip address to domain names
+3 those are
+		1.caching name servers
+		2.recursive name servers
+		3.root name servers
+		4.TLD name servers
+		5.authoritive name servers
+3.1,2 caching name server and recursive name servers work simuntaneously to make a dns performance for example;as in a local connection there is two computers looking for same website in a web browser for the time the server searches for the ip of the searched DNS by the user  in the internet and stores it as the cache file and after that next time a person searches for the same DNS the cache data will be sent to the system that searches this is the working of the cacheing and recursive name servers.recursive name servers perform a full search and caching is used for reducing full search  this both are a short term memory system.
+
+4 TCP/UDP these two are option used to transport in neworking in DNS we use UDP which is contains 8 packets to complete a full search and tcp uses 44 packets for a full search. the less packets the less the time so we use UDP over TCP in this DNS.
+
+the below are the resource records for the DNS
+5 A record to reduce the traffic in a network example: if there is two computers that request a popular websites like microsoft it might have 2or more ip address and all those address will be sent to the Dns server and it send to the requested system when the other system requires the same website ip the dns system sends it to the next system but in changeing the order of  the ip that list it gave to the first on this happens randomly while the search happens in the dns servers in a cycle to reduce traffice these lists is called as the A records. this system works on IPv4 ip
+
+6 AAAA quad A list this is similar to A record it transmitts iPv6.
+
+7 CNAME is a module that helps to redirect a websearcch for example when we search www.microsoft.com the A-list makes the dns search happens and website loads ,CNAME is used in redirecting to the same web ip while the search varys like microsoft.com instead of www.microsoft.com it will send the response to the dns as the same ip for the www.microsoft.com. cononicle name..
+
+8 next is MX records Mail Exchange records.
+9 SRV records Service records usded to find the various services
+10 TXT record 
+
+11 sub domain names are www. and .com these are the sub domain names these are used to address the search name and sector these sub domain can be at many layers as the registers wish these sub domains may shw the contry branch etc...
+
+
+
+
+
+
+
+
+
+
+
+DHCP Dynamic Host Configration Protocol is a network management protocol layer that used to configure a netwrok on which the particular data to be transmitted. these are used in the UDP

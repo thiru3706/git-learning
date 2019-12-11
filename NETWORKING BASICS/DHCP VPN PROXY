@@ -1,0 +1,41 @@
+DHCP
+
+18 DHCP Dynamic Host Configration Protocol is a network management protocol layer .
+
+19 these DHCP are the most needed part this allocates the ip to a machine or a computer that connects on network,these dhcp maintains the ip of connected devices .
+
+20 if these fails the DNS server can not be connected and these servers fails then the ip cannot be maintained or created to a machine or computer on the go.
+
+21 it has two factors DYNAMIC ALLOCATION & AUTOMATIC ALLOCATION the last one if fixed allocation.
+
+22 DYNAMIC ALLOCATION is makeing a set of ip and allocating randomly while the computer connects to the network every time.these could be different every time a network is connected.
+
+23 AUTOMATIC ALLOCATION is assigning the ip address for a machine in purpose i.e the DHCP will maintain the list  of assignd list of ip to the machines that are previously connected in the same network when the device is connected to network it atomatically assign the preassigned same ip. these are the difference between those two above.
+
+24 in FIXED allocation the dhcp server searches for the MAC ADDRESS that is registered to the dhcp server for the machine, if it is not registered then the dhcp will avoid ip axcess these are done for secure network cnnections.
+
+NAT
+
+25 NETWORK ADDRESSING TRANSLATION.
+
+26 this nat is used to change the ip to secure the privacey of the host for example if two networks netwrok a,b t
+has their own ip connected to a router which assigns two ip to the network when a computer form a sends or recives a datagram to b network the p will be changed to the routers ip as the source ip this process reduces the security issues on the ip of the computers. this process is knowm as ip masquerading process.
+
+27 this is a important security measure because if the computers ip is displayed in the network to network connection any one can use the ip to connect to our computer to void this nat provides a basic router ip as the source ip.
+
+28 there might 100 computers in network a all ips will be sent out in the form of router ip this is called as the one to many concept.
+
+29 the concepts on the return datagram are port preservation and port forwarding
+	port preservation is used to identify the computer that sends tha request from network a to b this a can have 100 computers the requested computer sends a request through a port 1010 then the router changes the ip as NAT works then the response for the request will be sent to through the router to the requested computer by the saved port no this will reduce the traffic on the response datagram transport.
+	port forwording this is same as the port preservation,if the company has two different services in two different servers in different port a client request for those services this forwarding options lets ,i.e the port no will be set to the services that we client needed if the client neededs the service the reqest will be sengt through that port directly to the service server this is port forwarding.
+
+VPN&PROXY
+
+30 A virtual private network extends a private network across a public network, and enables users to send and receive data across shared or public networks as if their computing devices were directly connected to the private network. these vpn acts as a tunnel that happens to be in internet to securely get the connection throught internet from any place to a private or a public or company server to axcess informations.
+
+31 A proxy server, also known as a "proxy" or "application-level gateway", is a computer that acts as a gateway between a local network (for example, all the computers at one company or in one building) and a larger-scale network such as the internet. Proxy servers provide increased performance and security./
+
+32 these are similar to vpn but these are way more secure and faster because these are servers that used to give a  gateway to a registerd client or to a registered site on a web broweser .
+reverse proxy is used for faster traffic these reverse proxy helps to dycrypt the clients search to multiple servers and makes the search faster than the normal server search.
+
+
