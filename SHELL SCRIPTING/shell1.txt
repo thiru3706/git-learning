@@ -1,0 +1,14 @@
+#!/bin/bash						#!/bin/bash-start of a program.
+echo "what is your name"				#to knoe the name asking to the guest.
+read n							#to read the name we can use any variable we use n.
+i=`grep $n list.txt`					#introduceing i variable to check the list and we use the grep command to search the name 								#in the party lname list that we created.[``] used in the strings that is non numeric 								#searches.
+if [ "$n" = "$i" ]					#if loop opens checking for the name condition.
+then							#then step like do in for loop comand.
+	echo "hi $n wellcome to the party"		#is the condition satisfies wellcome note.
+else							#else condition to differ that the conditions are not satisfied. 
+	echo "sorry, $n you are not in the guest list"	#to show that not satisfied.
+fi							#fi condition to close the if loop.
+
+
+
+#part welcome name single.

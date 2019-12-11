@@ -1,0 +1,17 @@
+#!/bin/bash
+echo "date"
+date				date code .
+echo "hi"
+whoami				to example name code .
+echo "enter the needed value" 	required fibonachi value.
+read n				no of times readed.
+a=0				defineing variable a for calculation.
+b=1				defineing variable b for calculation.
+for (( i=0; i<n; ++i ))		for loop opened syntax are available on google i- integer no of time to be run for i=0 untill i=n ++i- to 					repeat the process.
+do				do to open the for loop.
+	echo "$a"		$a fibonachi series that needed .
+	c=$(( $a + $b ))	addition syntax  adding new variable c to change the values of addition on the loop.
+	a=$b			to change the values next addition .
+	b=$c			to the next values of the addition.
+done				to close the for loop.
+fibonachi series flow code

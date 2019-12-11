@@ -1,0 +1,71 @@
+#!/bin/bash
+d="$(date +"%d-%m-%Y")"
+echo "$d"
+echo "enter customer name"
+read name
+echo "Welcom $name" >>$name.txt
+echo "Item  Quantity  Cost" >>$name.txt
+	echo "Items Available:"
+	echo "1.rice"
+	echo "2.dall"
+	echo "3.sugar"
+	echo "4.Cheese"
+	echo "5.soap"
+	rice=10
+	dall=20
+	sugar=15
+	cheese=25
+	soap=35
+	ricetotal=0
+	dalltotal=0
+	sugartotal=0
+	cheesetotal=0
+	soaptotal=0
+while [ "$item" != "0" ]
+do
+	echo "enter item"
+	read item
+	case $item in
+	1)
+	echo "enter quantity"
+	read qty
+	ricetotal=`echo "scale=2; $qty * $rice" | bc`
+	echo "rice  $qty  $ricetotal" >>$name.txt
+	;;
+	2)
+	echo "enter quantity"
+	read qty
+	dalltotal=`echo "scale=2; $qty * $dall" | bc`
+	echo "dall  $qty  $dalltotal" >>$name.txt
+	;;
+	3)
+	echo "enter quantity"
+	read qty
+	sugartotal=`echo  "scale=2; $qty * $sugar" | bc`
+	echo "sugar  $qty  $sugartotal" >>$name.txt
+	;;
+	4)
+	echo "enter quantity"
+	read qty
+	cheesetotal=`echo "scale=2; $qty * $cheese" | bc`
+	echo "cheese  $qty  $cheesetotal" >>$name.txt
+	;;
+	5)
+	echo "enter quantity"
+	read qty
+	soaptotal=`echo "scale=2; $qty * $soap" | bc`
+	echo "soap  $qty  $soaptotal" >>$name.txt
+	;;
+	esac
+done
+subtotal=`echo "scale=2; $ricetotal + $dalltotal + $sugartotal + $cheesetotal + $soaptotal" | bc`
+echo "Sub Total - $subtotal" >> $name.txt
+a=`echo "scale=2; $subtotal / 100" | bc`
+b=`echo "scale=2; $a * 14" | bc`
+echo "14%GST - $b" >>$name.txt
+nettotal=`echo "scale=2; $subtotal + $b" | bc`
+echo "Net Total - $nettotal" >>$name.txt
+cat $name.txt
+mkdir -p $d
+mv $name.txt $d
+

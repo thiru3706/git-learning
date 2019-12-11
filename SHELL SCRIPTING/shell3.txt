@@ -1,0 +1,49 @@
+#!/bin/bash
+read cname
+echo " coustomer name $cname "
+echo "no of items"
+read num
+for (( i=1; i<=num; ++i ))
+do
+	echo " select item "
+	echo "1. rice"
+	echo "2. dall"
+	echo "3. sugar"
+	echo "4. spices"
+	echo "5. cheese"
+	echo "choice"
+	read ch
+	echo "quantity"
+	read qn
+	if [ "$qn" = "0" ]
+	then
+		nil
+	fi
+	case $ch in
+		1)total1=`echo 10 \* $qn | bc`
+			;;
+		2)total2=`echo 25 \* $qn | bc`
+			;;
+		3)total3=`echo 15 \* $qn | bc`
+			;;
+		4)total4=`echo 20 \* $qn | bc`
+			;;
+		5)total5=`echo 5 \* $qn | bc`
+			;;
+esac
+done 
+echo "----------------------------------------------" >>$cname.txt
+echo "       SHELL SCRIPT BILLING ASSESMENT         " >>$cname.txt
+echo "----------------------------------------------" >>$cname.txt
+echo "coustomer name :$cname" >>$cname.txt
+echo "total on Rice=$total1" >>$cname.txt
+echo "total on Dall=$total2" >>$cname.txt
+echo "total on sugar=$total3" >>$cname.txt
+echo "total on spices=$total4" >>$cname.txt
+echo "total on cheese=$total5" >>$cname.txt
+echo "---------------------------------------------" >>$cname.txt
+echo "sub total" >>$cname.txt
+echo "GST tax 14%" >>$cname.txt
+echo "net total" >>$cname.txt
+echo "---------------------------------------------" >>$cname.txt
+

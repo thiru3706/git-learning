@@ -1,0 +1,19 @@
+#!/bin/bash								#basic line of script
+echo "hello, how many people"						#asking for how many people
+read num								#reading the no
+for (( i=1; i<=num; ++i ))						#for loop opened AS above program
+do									#do to open loopunder for condition
+	echo "what is the name $i "					#reading the no of names
+	read name
+	check=`grep $name list.txt`					#grep to integrate the list to name in the list
+	if [ "$check" = "$name" ]					#if condition opens to check the matching of the name with the list
+	then								#then to open if condition loop
+		echo "hi $name wellcome to the party"			#if satisfies the condition wellcome note
+	else								#else  to open if not condition loop
+		echo "sorry $name you are not in the guest list"	#if not satisfies the note to the name
+	fi								#if condition closes with if
+done									#done to close the for condition.
+
+
+
+#to n no of people party wellcome list.

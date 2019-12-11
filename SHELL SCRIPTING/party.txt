@@ -1,0 +1,57 @@
+Shell Script:
+
+#!/bin/bash
+mkdir -p archives/invites/	#creating directories for moving archived invitations
+mkdir -p archives/invites/approved	#creating directories for moving approved invitations
+mkdir -p archives/invites/rejected	#creating directories for moving rejected invitations
+echo "How many members?"	#geting the total number of invitations to be created
+read n
+for (( i=1; i<=n; i++ ))	#repeating the process n number of times
+	do
+		echo "name $i :"	#reading the name of the member
+		read namei
+		echo "age $i :"		#reading the age of the member
+		read agei
+		echo -e "Name:$namei Age:$agei" >> $namei.txt	#creating a file in the name of the member containing name and age of the member
+		tar cf $namei.tar $namei.txt && rm $namei.txt && mv $namei.tar archives	#archiving the file, deleting the source file and moving the archive to the archives folder
+		cd archives	#moving into the archives folder
+		tar xf $namei.tar && mv $namei.txt invites	#extracting the archive and moving the text file to the invites folder
+		cd invites	#moving into the folder invites
+		str=`grep Age $namei.txt`	#reading the text file and assigning the string that contains the age value to the variale str
+		cut=`cut -d':' -f3 <<< $str`	#delimiting the string and assigning the value of age to the variable cut
+			if [ $cut -lt 18 ]	#checking weather the age is less than 18
+			then
+				echo -e "Name: $namei Age:agei\nHi $namei, You are not allowed for the party" >> $namei.txt && mv $namei.txt rejected #if the age is less than 18, adding the text as the member is not allowed to the party and moving the file to the rejected folder
+			elif [ $cut -ge 18 ]	#checking weather the age is greater than or equal to 18
+			then
+				echo -e "Name: $namei Age:agei\nHi $name, You are invited for the party" >> $namei.txt && mv $namei.txt approved	#if the age is greater than or equal to 18 adding text as the member is invited to the party and moving the file to the approved folder
+			fi	#closing the if statement
+		cd ../..	#moving to the home folder so that when the loop is executed again the files will be created moved and modified in the exixting folders
+	done
+cd archives/invites/approved	#moving into the approved folder
+echo "total number of approved invitations:"
+ls -1 | wc -l	#counting the number of files in the approved folder
+cd ../rejected	#moving to the rejected folder
+echo "total number of rejected invitations:"
+ls -1 | wc -l	#counting the number of filess in the rejected folder
+
+sample output:
+
+How many members?
+3
+name 1 :
+Joe
+age 1 :
+23
+name 2 :
+John
+age 2 :
+21
+name 3 :
+Jacob
+age 3 :
+17
+total number of approved invitations:
+2
+total number of rejected invitations:
+1
