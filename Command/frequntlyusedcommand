@@ -1,0 +1,26 @@
+secure copy to instance: scp -i <keyfile> <copying file> <hostip>:<location>.
+
+for file to execute permission: chmod 500 <filename>.
+for key files the permission:  chmod 400 <keyfile name>.
+
+file permissions:
+	0 -no permission ---
+	1 -execute permission --x
+	2 -write permission -w-
+	3 -Execute and write permission:1(execute)+2(write)=3  -wx
+	4 -Read permission r--
+	5 -Read and execute permission:4(read)+1(execute)=5 r-x
+	6 -Read and write permission:4(read)+2(write)=6 rw-
+	7 -All permissions:4(read)+2(write)+1(execute)=7 rwx
+
+ownership changeing:
+	to change file ownership to user and group: chown user:group filename [either name or id can be given for user and group].
+	to change file ownership to user: chown user filename
+	to change file ownership to group: chown group filename
+	If the directory contains symbolic links: chown -h www-data filename
+	to change all subfolders and files in the folder recuresively: chown -R user:group <folder or folder path>.
+	if the directory contains symkink: chown -hR user:group directory.
+	
+to replace the line of string with stream line editor SED: sed -i 's/<the serach string that needs to be changed>/<change to string>/g'.
+
+
